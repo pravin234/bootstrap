@@ -1,26 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      header{
-        background-color: darkslategrey;
-        text-align: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        font-size: medium;
-      }
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="header">
-   hhhhh
 
+  <div class="topnav">
+    <a href="">Logo</a> 
+    <div class="topnav-right">
+      <a href="#home">Home</a>
+      <a href="#search">Search</a>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+
+  <header class="header" data-aos="fade-up" data-aos-delay="200">
+    <p>
+      <h1>Better Solutions For Your Business</h1>
+      <img  class="animate__animated animate__bounce " src="image/hero-img.png" alt="Hero Image">
+    </p>
+    
   </header>
-  
-        
+<div class="container">
+  <h2>Our  Partners</h2>
+   <section class="customer-logos slider">
+      <div class="slide"><img src="image/e.jpg"></div>
+      <div class="slide"><img src="image/logo.jpg"></div>
+      <div class="slide"><img src="image/blue-tech-logo.jpg"></div>
+      <div class="slide"><img src="image/colors-curl-logo-template.jpg"></div>
+      <div class="slide"><img src="image/abstract-cross-logo.jpg"></div>
+      <div class="slide"><img src="image/football-logo-background.jpg"></div>
+      <div class="slide"><img src="image/background-of-spots-halftone.jpg"></div>
      
+   </section>
+</div>
+<section id="About">
+  <p style="position: -webkit-sticky;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, deserunt ipsa facere animi laborum dolor. Hic quam cumque maxime iste nisi, reiciendis, quod numquam cum incidunt aut animi adipisci delectus?
+  </p>
+</section>
+<section id="service">
+  <div class="row">
+    <div class="column">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta maxime nesciunt laudantium eius vel similique rerum quo totam, incidunt iusto est pariatur nisi, ab at ea aspernatur? Sit, unde asperiores!</div>
+    <div class="column">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, quisquam beatae. Nam incidunt labore laborum velit maiores distinctio, fugit odit ea, optio earum dolor commodi tempore minus explicabo illum quo.</div>
+    <div class="column">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, architecto velit doloremque expedita voluptatum hic ab sapiente nostrum accusamus ipsam molestiae perferendis. Nemo quaerat explicabo aperiam nobis, sit temporibus vero.</div>
+    <div class="column"></div>
+  </div>
+</section>
+<section id="footer">
+  <hr>
+  <p>Author: Hege Refsnes</p>
+  <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+ 
+</section>
+
+
+
+</div>
+
+<script>
+  $(document).ready(function(){
+    window.onscroll = function() {
+      // Get the navbar
+      var navbar = document.querySelector('.topnav');
+
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position.
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("fixed");
+      } else {
+        navbar.classList.remove("fixed");
+      }
+    };
+
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
+
 </body>
 </html>
